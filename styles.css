@@ -1,1 +1,90 @@
+* {
+    /* You may notice that the .label element is actually
+    288px wide instead of 270.
+    This is because, by default, the browser includes the border and
+    padding when determining an element's size.
+    To solve this, reset the box model by creating a '*' selector and
+    giving it a 'box-sizing' property of 'border-box'. */
+    box-sizing: border-box;
+}
 
+html {
+    font-size: 16px;
+}
+
+body {
+    /* Remember that fonts with spaces in the name 
+    must be wrapped in quotes for CSS. */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.label {
+    /* Borders can be used to group and prioritize content. */
+    border: 2px solid black;
+    /* Good use of white space can bring focus to the important
+    elements of your page, and help guide your user's eyes
+    through your text. */
+    width: 270px;
+    margin: 20px auto;
+    padding: 0 7px;
+}
+
+/* Updated h1 selector to be header h1 to specifically target the h1 element. */
+header h1 {
+    /* Remember that the use of h1, h2, and similar tags determine the
+    semantic structure of your HTML. However, you can adjust the CSS of
+    these elements to control the visual flow and hierarchy.
+    Setting the 'font-weight' property to 800 will make you h1 text bolder. */
+    /* font-weight: 800; */
+    text-align: center;
+    /* To fine-tune the placement of your h1 */
+    margin: -4px 0;
+    /* To adjust the space between each character of text in an element. */
+    letter-spacing: 0.15px;
+}
+
+p {
+    margin: 0;
+    /* Now we can add the horizontal spacing using 'flex'. 
+    In your 'p' selector, add a 'display' property set to 'flex'
+    and a justify-content' property set to 'space-between'. */
+    display: flex;
+    justify-content: space-between;
+}
+
+.divider {
+    border-bottom: 1px solid #888980;
+    margin: 2px 0;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.large {
+    height: 10px;
+}
+
+.large, .medium {
+    background-color: black;
+    /* Precondition: there is a small border */
+    border: 0;
+}
+
+.small-text {
+    /* The 'rem' unit stands for 'root em', and is relative to the font size
+    of the html element.
+    0.85rem would calculate to roughly 13.6px.
+    1rem = 16px; */
+    font-size: 0.85rem;
+}
+
+.calories-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.calories-info h2 {
+    margin: 0;
+}
