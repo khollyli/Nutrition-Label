@@ -113,9 +113,20 @@ p {
     margin-left: 1em;
 }
 
+.double-indent {
+    margin-left: 2em;
+}
+
 /* The ':not' pseudo-selector can be used to select all elements
 that do not match the given CSS rule.
 The below selects all 'div' elements without an 'id' of '.no-divider' */
 .daily-value p:not(.no-divider) {
     border-bottom: 1px solid #888989;
+}
+
+.note {
+    font-size: 0.6rem;
+    margin: 5px 0;
+    padding: 0 8px;
+    text-indent: -8px;
 }
